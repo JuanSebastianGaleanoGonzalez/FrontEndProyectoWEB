@@ -1,7 +1,12 @@
-
-  <span>{{ title }} app is running!</span>
+<html>
+  <head>
+    <link rel="stylesheet" href = "app.component.css">
+  </head>
+  <h1>Bienvenido al Sistema de la Registraduria Nacional de Wakanda</h1>
+  <a href="https://www.javeriana.edu.co">Pagina de la Universidad</a>
+  <body>
   <div>
-    <table class = "table">
+    <table class="table">
       <thead>
         <tr>
           <th>ID</th>
@@ -18,3 +23,9 @@
       </tbody>
     </table>
   </div>
+  <dl *ngFor="let pantera of panteras">
+    <dt>{{pantera.id}}</dt>
+    <dd>{{pantera.nombre}}</dd>
+  </dl>
+</body>
+</html>

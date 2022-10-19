@@ -2,9 +2,9 @@
   <head>
     <link rel="stylesheet" href = "app.component.css">
   </head>
+  <body>
   <h1>Bienvenido al Sistema de la Registraduria Nacional de Wakanda</h1>
   <a href="https://www.javeriana.edu.co">Pagina de la Universidad</a>
-  <body>
   <div>
     <table class="table">
       <thead>
@@ -18,14 +18,13 @@
         <tr *ngFor="let pantera of panteras">
           <td>{{pantera.id}}</td>
           <td>{{pantera.nombre}}</td>
-          <td>Acciones</td>
+          <td>
+            <p class="boton eliminar btn-icon-split">Eliminar</p>
+            <p class="boton editar btn-icon-split">Editar</p>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <dl *ngFor="let pantera of panteras">
-    <dt>{{pantera.id}}</dt>
-    <dd>{{pantera.nombre}}</dd>
-  </dl>
 </body>
 </html>

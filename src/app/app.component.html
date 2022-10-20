@@ -1,10 +1,11 @@
 <html>
-  <head>
-    <link rel="stylesheet" href = "app.component.css">
-  </head>
-  <body>
+
+<head>
+  <link rel="stylesheet" href="app.component.css">
+</head>
+
+<body>
   <h1>Bienvenido al Sistema de la Registraduria Nacional de Wakanda</h1>
-  <a href="https://www.javeriana.edu.co">Pagina de la Universidad</a>
   <div>
     <table class="table">
       <thead>
@@ -19,12 +20,30 @@
           <td>{{pantera.id}}</td>
           <td>{{pantera.nombre}}</td>
           <td>
-            <p class="boton eliminar btn-icon-split">Eliminar</p>
-            <p class="boton editar btn-icon-split">Editar</p>
+            <p class="boton eliminar btn-icon-split" (click)="eliminarPantera(pantera)">Eliminar</p>
+            <p class="boton editar btn-icon-split" (click)="actualizarPantera(pantera)">Editar</p>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+  <div style="margin-top: 10%;">
+    <form [formGroup]="panteraForm" (ngSubmit)="guardarPantera()">
+      <h1>Ingresar nueva Pantera:</h1>
+      <div class="formGroup formularioRegistro">
+        <div>
+          <label>ID</label>
+          <input type="text" formControlName="id" class="formControl">
+        </div>
+        <div>
+          <label>Nombre</label>
+          <input type="text" formControlName="nombre" class="formControl">
+        </div>
+      </div>
+      <button type = "submit" class="boton editar btn-icon-split" [disabled]="panteraForm.invalid" style = "margin-left: 40%; margin-top: 2%;">Guardar</button>
+    </form>
+  </div>
+  <h1 style = "margin-top: 10%;">Gracias por hacer uso de nuestros servicios.</h1>
 </body>
+
 </html>

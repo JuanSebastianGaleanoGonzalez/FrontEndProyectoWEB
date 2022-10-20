@@ -1,64 +1,73 @@
-h1{
+h1 {
   color: rgb(0, 140, 255);
   font-size: larger;
   font-weight: bold;
   font-style: italic;
   text-align: center;
 }
-table{
+
+table {
   font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
   width: 100%;
   display: inline-block;
   box-sizing: content-box;
-  position: relative;
+  border-color: #04AA6D;
 }
-table td, table th{
+
+table td,
+table th {
   border: 1px solid #ddd;
   padding: 4px;
 }
-table th{
+
+table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
   background-color: #04AA6D;
   color: white;
 }
-div{
+
+div {
   background-color: white;
-  margin-top: 100px;
-  margin-left: 300px;
-  margin-right: 300px;
-  box-sizing: border-box;
+  padding-left: 32%;
+  padding-right: 32%;
 }
-body{
+
+body {
   background-color: beige;
 }
 
-.eliminar{
+.eliminar {
   color: #fff;
   background-color: #e74a3b;
   border-color: #e74a3b;
-  text-shadow:0px 1px 0px #810e05;
-	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  text-shadow: 0px 1px 0px #810e05;
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
 }
 
-.editar{
+.editar {
   color: #fff;
   background-color: #36b9cc;
   border-color: #36b9cc;
-  text-shadow:0px 1px 0px #180581;
-	background:linear-gradient(to bottom, #36b9cc 5%, #180581 100%);
+  text-shadow: 0px 1px 0px #180581;
+  background: linear-gradient(to bottom, #36b9cc 5%, #180581 100%);
 }
 
-.boton{
-	border-radius:18px;
-	display:inline-block;
-	cursor:pointer;
-	font-family:'Times New Roman', Times, serif;
-	font-size:17px;
-	padding:7px 25px;
-	text-decoration:none;
+.boton {
+  border-radius: 18px;
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+  padding: 7px 25px;
+  text-decoration: none;
   margin: 0 5px 0 5px;
+  text-align: center;
 }
 
+.formularioRegistro{
+  padding-left: 10%;
+  padding-right: 20%;
+  align-items: center;
+}

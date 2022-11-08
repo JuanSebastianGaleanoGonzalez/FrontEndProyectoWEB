@@ -12,13 +12,17 @@
         <tr>
           <th>ID</th>
           <th>Nombre</th>
-          <th>Acciones</th>
+          <th>Email</th>
+          <th>Tribu</th>
+          <th>Botones</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let pantera of panteras">
           <td>{{pantera.id}}</td>
-          <td>{{pantera.nombre}}</td>
+          <td>{{pantera.name}}</td>
+          <td>{{pantera.email}}</td>
+          <td>{{pantera.tribe}}</td>
           <td>
             <p class="boton eliminar btn-icon-split" (click)="eliminarPantera(pantera)">Eliminar</p>
             <p class="boton editar btn-icon-split" (click)="actualizarPantera(pantera)">Editar</p>
@@ -37,7 +41,15 @@
         </div>
         <div>
           <label>Nombre</label>
-          <input type="text" formControlName="nombre" class="formControl">
+          <input type="text" formControlName="name" class="formControl">
+        </div>
+        <div>
+          <label>email</label>
+          <input type="text" formControlName="email" class="formControl">
+        </div>
+        <div>
+          <label>tribe</label>
+          <input type="text" formControlName="tribe" class="formControl">
         </div>
       </div>
       <button type = "submit" class="boton editar btn-icon-split" [disabled]="panteraForm.invalid" style = "margin-left: 40%; margin-top: 2%;">Guardar</button>

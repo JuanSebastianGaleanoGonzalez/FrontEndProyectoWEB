@@ -24,7 +24,9 @@ export class AppComponent implements OnInit {
 
     this.panteraForm = this.fb.group({
       id: ['', Validators.required],
-      nombre: ['', Validators.required]
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      tribe: ['', Validators.required]
     })
   }
 
@@ -47,7 +49,9 @@ export class AppComponent implements OnInit {
   actualizarPantera(pantera: any): void {
     this.panteraForm.setValue({
       id: pantera.id,
-      nombre: pantera.nombre
+      name: pantera.name,
+      email: pantera.email,
+      tribe: pantera.tribe
     })
     this.eliminarPantera(pantera);
   }

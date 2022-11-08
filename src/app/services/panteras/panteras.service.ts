@@ -15,7 +15,7 @@ export class PanterasService {
   }
 
   public putPantera (pantera:any): Observable<any>{
-    return this.httpClient.put(this.API_SERVER + "add/" + pantera.id + "/" + pantera.nombre, pantera);
+    return this.httpClient.put(this.API_SERVER + "add/" + pantera.id + "/" + pantera.name + "/" + pantera.email + "/" + pantera.tibre, pantera);
   }
 
   public deletePantera (pantera:any): Observable<any>{
@@ -23,6 +23,6 @@ export class PanterasService {
   }
 
   public postPantera (pantera:any): Observable<any>{
-    return this.httpClient.post(this.API_SERVER + pantera.id + "/" + pantera.id, pantera);
+    return this.httpClient.post(this.API_SERVER + pantera.id + "/" + pantera.id+ "/" + pantera.name + "/" + pantera.email + "/" + pantera.tibre, pantera);
   }
 }

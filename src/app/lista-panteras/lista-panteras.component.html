@@ -1,0 +1,28 @@
+<body>
+    <h1>Bienvenido al Sistema de la Registraduria Nacional de Wakanda</h1>
+    <div>
+        <table class="table">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Tribu</th>
+            <th>Botones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pantera of panteras">
+            <td>{{pantera.id}}</td>
+            <td>{{pantera.name}}</td>
+            <td>{{pantera.email}}</td>
+            <td>{{pantera.tribe}}</td>
+            <td>
+                <p class="boton eliminar btn-icon-split" (click)="eliminarPantera(pantera)">Eliminar</p>
+                <p class="boton editar btn-icon-split" (click)="actualizarPantera(pantera)">Editar</p>
+            </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</body>

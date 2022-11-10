@@ -1,36 +1,19 @@
 <html>
 
-<head>
+
   <link rel="stylesheet" href="app.component.css">
-</head>
+  <nav class="barra navegacion">
+    <ul class="nav-list">
+        <li><a href="/pantera">panteras</a> </li>
+        <li><a href="/armas">armas</a></li>
+       
+    </ul>
+    
+</nav>
+
 
 <body>
-  <h1>Bienvenido al Sistema de la Registraduria Nacional de Wakanda</h1>
-  <div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nombre</th>
-          <th>Email</th>
-          <th>Tribu</th>
-          <th>Botones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let pantera of panteras">
-          <td>{{pantera.id}}</td>
-          <td>{{pantera.name}}</td>
-          <td>{{pantera.email}}</td>
-          <td>{{pantera.tribe}}</td>
-          <td>
-            <p class="boton eliminar btn-icon-split" (click)="eliminarPantera(pantera)">Eliminar</p>
-            <p class="boton editar btn-icon-split" (click)="actualizarPantera(pantera)">Editar</p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  
   <div style="margin-top: 10%;">
     <form [formGroup]="panteraForm" (ngSubmit)="guardarPantera()">
       <h1>Ingresar nueva Pantera:</h1>
@@ -59,3 +42,4 @@
 </body>
 
 </html>
+<router-outlet></router-outlet>

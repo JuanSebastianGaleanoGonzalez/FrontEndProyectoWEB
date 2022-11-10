@@ -1,0 +1,22 @@
+<h1>listado de armas </h1>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>identificación</th>
+                <th>Nombre</th>
+                <th>Calibre</th>
+                <th>pantera</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let arma of armas">
+                <td>{{arma.id}}</td>
+                <td>{{arma.name}}</td>
+                <td>{{arma.calibre}}</td>
+                <td>{{arma.id_pantera}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

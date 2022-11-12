@@ -15,7 +15,7 @@ export class ListaArmasComponent implements OnInit {
 
   ngOnInit(): void {
     this.armasServiciosService.getAllArmas().subscribe(resp =>{
-
+      this.armas = resp;
     },
     error =>{
       console.error(error);

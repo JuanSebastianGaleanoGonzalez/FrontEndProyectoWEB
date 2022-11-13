@@ -1,0 +1,21 @@
+<h1>listado de admins </h1>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>identificación</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let admin of administrador">
+                <td>{{admin.id}}</td>
+                <td>{{admin.nombre}}</td>
+                <td>{{admin.correo}}</td>
+                <td>{{admin.password}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

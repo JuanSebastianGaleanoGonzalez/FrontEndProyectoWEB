@@ -14,7 +14,7 @@ export class PanterasService {
     return this.httpClient.get(this.API_SERVER);
   }
 
-  public getPantera(id: number): Observable<any>{
+  public getPantera(id: any): Observable<any>{
     return this.httpClient.get(this.API_SERVER + id);
   }
 

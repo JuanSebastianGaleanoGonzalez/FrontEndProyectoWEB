@@ -1,17 +1,23 @@
-<h1>Informacion del Usuario:<h1>
-  <div>
-    <p>ID</p>
-    <p>{{pantera.id}}</p>
-  </div>
-  <div>
-    <p>Nombre</p>
-    <p>{{pantera.name}}</p>
-  </div>
-  <div>
-    <p>Correo</p>
-    <p>{{pantera.email}}</p>
-  </div>
-  <div>
-    <p>Tribu</p>
-    <p>{{pantera.tribe}}</p>
-  </div>
+<head>
+  <link rel="stylesheet" href="informacion-usuario.component.css">
+</head>
+<div class = "infoUsuario">
+  <h1>Informacion del Usuario:</h1>
+    <div>
+     <i>ID: </i>
+     <i>{{pantera.id}}</i>
+    </div>
+    <div>
+     <i>Nombre: </i>
+     <i>{{pantera.name}}</i>
+    </div>
+    <div>
+     <i>Correo: </i>
+     <i>{{pantera.email}}</i>
+    </div>
+    <div>
+     <i>Tribu: </i>
+     <i>{{pantera.tribe}}</i>
+    </div>
+</div>
+  <app-listado-armas></app-listado-armas>

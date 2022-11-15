@@ -10,7 +10,7 @@ import { PanterasService } from 'src/app/services/panteras/panteras.service';
 })
 export class UsuarioComponent implements OnInit {
   pantera: any;
-  idUsuario: any;
+  idUsuario: number;
   formUsuario: FormGroup;
   constructor(public panterasService: PanterasService, public fb: FormBuilder, private router:Router) { }
 
@@ -24,6 +24,8 @@ export class UsuarioComponent implements OnInit {
     this.pantera = this.formUsuario.value;
     this.panterasService.getPantera(this.pantera.id).subscribe(resp => {
       this.pantera = resp;
+      this.idUsuario = this.pantera.id;
+      console.log(this.pantera);
     },
       error => {
         console.error(error);
@@ -31,10 +33,10 @@ export class UsuarioComponent implements OnInit {
   }
 
   mostrarInformacionUsuario():void{
-      this.router.navigate(['usuario/informacionUsuario/', parseInt(this.pantera.id)]);
+      this.router.navigate(['usuario/informacionUsuario/', this.idUsuario]);
   }
 
   mostrarListadoArmas(): void{
-      this.router.navigate(['usuario/listaArmas/', this.pantera.id]);
+      this.router.navigate(['usuario/listaArmas/', this.idUsuario]);
   }
 }

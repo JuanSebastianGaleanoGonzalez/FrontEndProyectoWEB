@@ -1,15 +1,13 @@
 <div style="margin-top: 1%;">
   <form [formGroup]="formUsuario" (ngSubmit)="consultarPantera()">
-    <p>Ingrese el ID de usuario::</p>
+    <p>Ingrese el ID de usuario:</p>
     <div class="formGroup formularioRegistro">
       <div>
         <label>ID</label>
-        <input type="text" formControlName="id" class="formControl">
+        <input type="number" formControlName="id" class="formControl">
       </div>
     </div>
     <button type = "submit" class="boton editar btn-icon-split" [disabled]="formUsuario.invalid" style = "margin-left: 40%; margin-top: 2%;">Ingresar</button>
   </form>
-  <p>Seleccione la opcion deseada: </p>
-<button type="button" class="btn btn-primary boton" (click) = "mostrarInformacionUsuario()">Informacion del Usuario</button>
-<button type="button" class="btn btn-primary boton" (click) = "mostrarListadoArmas()">Listado de Armas</button>
+<button type="button" class="btn btn-primary boton" (click) = "mostrarInformacionUsuario()">Consultar</button>
 </div>

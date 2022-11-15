@@ -11,12 +11,13 @@ import { PanterasService } from 'src/app/services/panteras/panteras.service';
 export class InformacionUsuarioComponent implements OnInit {
   title = 'Informacion del Usuario.';
   pantera: any;
-  id: any;
-  constructor(private rutaActual: ActivatedRoute, public panteraService: PanterasService) {}
+  id: number;
+  constructor(private rutaActual: ActivatedRoute, public panteraService: PanterasService) {
+  }
 
 
   ngOnInit(): void {
-    console.log(this.rutaActual.snapshot.params['idUsuario']);
+    this.id = this.rutaActual.snapshot.params['id'];
     this.pantera = this.consultarPantera(this.id);
   }
 

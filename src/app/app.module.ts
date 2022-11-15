@@ -8,11 +8,13 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { ListaPanterasComponent } from './lista-panteras/lista-panteras.component';
 import { ListaArmasComponent } from './lista-armas/lista-armas.component';
 import { ListaAdminComponent } from './lista-admin/lista-admin.component';
+import { PagPanteraComponent } from './pag-pantera/pag-pantera.component';
 
 const appRoutes: Routes=[
   {path:'pantera', component:ListaPanterasComponent},
   {path:'armas', component:ListaArmasComponent},
-  {path:'admin', component:ListaAdminComponent}
+  {path:'admin', component:ListaAdminComponent},
+  {path:'paginaPantera', component:PagPanteraComponent}
 ];
 
 @NgModule({
@@ -20,7 +22,8 @@ const appRoutes: Routes=[
     AppComponent,
     ListaPanterasComponent,
     ListaArmasComponent,
-    ListaAdminComponent
+    ListaAdminComponent,
+    PagPanteraComponent
   ],
   imports: [
     BrowserModule, 

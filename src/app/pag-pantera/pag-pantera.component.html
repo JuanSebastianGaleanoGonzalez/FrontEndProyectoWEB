@@ -1,0 +1,18 @@
+<h1>enrutamiento correcto 
+    <li>
+        <form [formGroup]="usuForm" (ngSubmit)="consultarPantera()">
+          <h1>mandar usuario</h1>
+          <div>
+            <div>
+              <label>usuario</label><br>
+              <input type="text" formControlName="usuario" class="formControl" placeholder="usuario">
+            </div>
+            <div>
+                <label>clave</label><br>
+                <input type="text" formControlName="clave" class="formControl" placeholder="clave">
+            </div>
+          </div>
+          <button type = "submit" class="btn btn-primary" [disabled]="usuForm.invalid" >logIn</button>
+        </form>
+      </li>
+</h1>

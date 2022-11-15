@@ -4,19 +4,44 @@
   <link rel="stylesheet" href="app.component.css">
   <nav class="barra navegacion">
     <ul class="nav-list">
-        <li><a href="/pantera">panteras</a> </li>
+       <!--<li><a href="/pantera">panteras</a> </li>-->
         <li><a href="/armas">armas</a></li>
         <li><a href="/admin">administradores</a></li>
-       
-    </ul>
-    
+    </ul> 
   </nav>
 
 
   <body>
-    
-   
     <h1 style = "margin-top: 10%;">Gracias por hacer uso de nuestros servicios.</h1>
+    <h2 > porfavor seleccione su rol en la notaria</h2>
+    <div style = "text-align: center">
+      <ul>
+        <li><button class="btn btn-primary" (click)="rutaAdministrador()" >administrador </button></li>
+        <li></li>
+        <li><button class="btn btn-primary" (click)="rutaPantera()" >pantera</button></li>
+        <!--<li>
+          <form [formGroup]="usuForm" >
+            <h1>mandar usuario</h1>
+            <div>
+              <div>
+                <label>usuario</label>
+                <input type="text" formControlName="id" class="formControl">
+              </div>
+              <div>
+                <label>clave</label>
+                <input type="text" formControlName="clave" class="formControl">
+              </div>  
+            <input type="text" name="clave" placeholder="clave" id="">
+            <input type="button" name="enviar" value="Enviar" onclick="rutaPantera()">
+            </div>
+            <button type = "submit" class="btn btn-primary" [disabled]="usuForm.invalid" >logIn</button>
+          </form>
+        </li>-->
+      </ul>
+      
+      
+    </div>
+    
   </body>
 
 </html>

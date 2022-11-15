@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { PanterasService } from './services/panteras/panteras.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,47 +8,18 @@ import { PanterasService } from './services/panteras/panteras.service';
 
 export class AppComponent implements OnInit {
   title = 'FrontEndPanteras';
-  panteras: any;
-  panteraForm: FormGroup;
 
-  constructor(public panterasService: PanterasService, public fb: FormBuilder) { }
+  constructor(private router:Router) {}
 
   ngOnInit(): void {
-    this.panterasService.getAllPanteras().subscribe(resp => {
-      this.panteras = resp;
-    },
-      error => {
-        console.error(error);
-      });
-
-    this.panteraForm = this.fb.group({
-      id: ['', Validators.required],
-      nombre: ['', Validators.required]
-    })
   }
 
-  guardarPantera(): void {
-    this.panterasService.putPantera(this.panteraForm.value).subscribe(resp => {
-      this.panteras.push(this.panteraForm.value);
-      this.panteras = this.panteras.filter(((pantera:any) => resp.id !== pantera.id ));
-      this.panteraForm.reset();
-    },
-      error => console.error(error));
+  administradorClick(): void{
+      this.router.navigate(['administrador']);
   }
 
-  eliminarPantera(pantera: any): void {
-    this.panterasService.deletePantera(pantera).subscribe(resp => {
-      this.panteras.pop(this.panteras.indexOf(pantera));
-    },
-      error => console.error(error));
-  }
-
-  actualizarPantera(pantera: any): void {
-    this.panteraForm.setValue({
-      id: pantera.id,
-      nombre: pantera.nombre
-    })
-    this.eliminarPantera(pantera);
+  usuarioClick():void{
+    this.router.navigate(['usuario']);
   }
 }
 

@@ -1,0 +1,54 @@
+<head>
+  <link rel="stylesheet" href="listado-panteras.component.css">
+</head>
+<body>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Tribu</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pantera of panteras">
+          <td>{{pantera.id}}</td>
+          <td>{{pantera.name}}</td>
+          <td>{{pantera.email}}</td>
+          <td>{{pantera.tribe}}</td>
+          <td>
+            <p class="boton eliminar btn-icon-split" (click)="eliminarPantera(pantera)">Eliminar</p>
+            <p class="boton editar btn-icon-split" (click)="actualizarPantera(pantera)">Editar</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top: 1%;">
+    <form [formGroup]="panteraForm" (ngSubmit)="guardarPantera()">
+      <h1>Ingresar nueva Pantera:</h1>
+      <div class="formGroup formularioRegistro">
+        <div>
+          <label>ID</label>
+          <input type="text" formControlName="id" class="formControl">
+        </div>
+        <div>
+          <label>Nombre</label>
+          <input type="text" formControlName="name" class="formControl">
+        </div>
+        <div>
+          <label>Correo</label>
+          <input type="text" formControlName="email" class="formControl">
+        </div>
+        <div>
+          <label>Tribu</label>
+          <input type="text" formControlName="tribe" class="formControl">
+        </div>
+      </div>
+      <button type = "submit" class="boton editar btn-icon-split" [disabled]="panteraForm.invalid" style = "margin-left: 40%; margin-top: 2%;">Guardar</button>
+    </form>
+  </div>
+</body>
